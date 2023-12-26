@@ -1,0 +1,21 @@
+body{
+    overflow: hidden;
+    font-family: "Roboto", serif;
+    background: linear-gradient(135deg, black, #220033);
+    height: 100vh;
+}
+p{
+    font-size: 22px;
+color: antiquewhite;
+}
+
+.letter{
+    border-radius: 3px;
+    padding: 10px 30px;
+    display: block;
+    margin: auto;
+    background-color: rgb(245, 3, 84);
+    width: 80vw;
+    height: auto;
+    min-height: 80vh;
+}

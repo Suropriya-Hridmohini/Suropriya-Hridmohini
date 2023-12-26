@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="us.css">
+<html>
+
+<head>
+</head>
+
+<body>
+    <div class="us">
+        <p>You:</p>
+        <textarea id="myContent" oninput="saveContent()" style="font-family: Roboto, serif;"></textarea>
+        <button onclick="saveContent()">Save</button>
+
+        <p>Me</p>
+        <textarea id="myContent2" oninput="saveContent2()" style="font-family: Roboto, serif;"></textarea>
+        <button onclick="saveContent2()">Save</button>
+    </div>
+
+    <script>
+        // Check if there is saved content
+        if (localStorage.getItem("content")) {
+            document.getElementById("myContent").value = localStorage.getItem("content");
+        }
+
+        function saveContent() {
+            var content = document.getElementById("myContent").value;
+            localStorage.setItem("content", content);
+            console.log("Content saved!");
+        }
+
+        // New function for the new textarea
+        if (localStorage.getItem("content2")) {
+            document.getElementById("myContent2").value = localStorage.getItem("content2");
+        }
+
+        function saveContent2() {
+            var content = document.getElementById("myContent2").value;
+            localStorage.setItem("content2", content);
+            console.log("More content saved!");
+        }
+    </script>
+</body>
+
+</html>
